@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            body {
+                height: 100vh;
+                width: 100vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .out {
+                height: 30rem;
+                width: 30rem;
+                background-color: rgb(250, 126, 69);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 20px;
+            }
+            .mid {
+                height: 15rem;
+                width: 15rem;
+                background-color: lightblue;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 20px;
+            }
+            .in {
+                height: 8rem;
+                width: 8rem;
+                background-color: yellow;
+                border-radius: 20px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="out">
+            <div class="mid">
+                <div class="in">
+                </div>
+            </div>
+        </div>
+        <script>
+            let orange= document.querySelector(".out");
+            let blue = document.querySelector(".mid");
+            let yellow = document.querySelector(".in");
+            orange.addEventListener("click", (e) => {
+                alert("orange");
+               
+            })
+            blue.addEventListener("click", (e) => {
+                alert("blue");
+                 e.stopPropagation();
+                 e.stopImmediatePropagation();
+            })
+            blue.addEventListener("click", (e) => {
+                alert("blue 2");
+                 e.stopPropagation();
+                 
+            })
+            yellow.addEventListener("click", (e) => {
+                alert("yellow");
+                e.stopPropagation();
+            })
+        </script>
+
+    </body>
+</html>

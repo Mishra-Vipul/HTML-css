@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            body{
+                background-color: black;
+            }
+            .balls{
+                margin: 10rem;
+                width: 85vw;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+            .ball {
+                margin: 0.5rem;
+                height: 40px;
+                width: 40px;
+                border-radius: 50px;
+                border: none;
+                background-color: lightcoral;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="balls">
+            <div class="ball"></div>
+            <div class="ball"></div>
+            <div class="ball"></div>
+            <div class="ball"></div>
+            <div class="ball"></div>
+        </div>
+
+        <script>
+            //Q-> Make a loading animation using the above 5 balls and using JS
+
+            let allBalls=document.querySelectorAll(".ball");
+                    
+            function animateBalls(idx) {
+                idx=idx%allBalls.length;
+                let cur = allBalls[idx];
+                let prev ;
+                if(idx === 0) prev=allBalls[allBalls.length-1];
+                else prev = allBalls[idx-1];
+
+                cur.style.opacity = 0; //hide
+                prev.style.opacity=1; //display
+
+                setTimeout(() => {
+                    animateBalls(idx+1);
+                }, 500)
+            }
+            animateBalls(0);
+        </script>
+    </body>
+</html>

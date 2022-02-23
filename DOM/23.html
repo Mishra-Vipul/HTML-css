@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .h1{
+                display: flex;
+                background-color: aquamarine;
+                justify-content: center;
+                width: 100vw;
+            }
+            .rem {
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+
+                background-color: aquamarine;
+            }
+            table {
+                border: 3px solid black;
+                width: 40rem;
+            }
+            tr{
+                margin: 0px;
+                text-align: center;
+            }
+            td{
+                margin: 0px;
+            }
+            thead{
+                margin: 0px;
+                color: white;
+                background-color: black;
+            }
+            tbody{
+                font-size: medium;
+                margin: 0px;
+                color: blue;
+                background-color: yellow;
+                border: 1px solid black;
+            }
+            
+            
+        </style>
+    </head>
+    <body>
+        <div class="h1"><h1><strong>DATABASE</strong></h1></div>
+        <div class="rem">
+            <table>
+                <thead>
+                <tr>
+                    <td><h3>S. No.</h3></td>
+                    <td><h3>Name</h3></td>
+                    <td><h3>Marks</h3></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Athar</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Md. Athar</td>
+                    <td>4</td>
+                </tr>
+            </tbody>
+            </table>
+            <form>
+                <label for="name">Name: <input type="text" id="name" /> </label>
+                <label for="marks">Marks: <input type="number" id="marks" /> </label>
+                <input type="submit" id="Submit" />
+            </form>
+        </div>
+            <script>
+                //Q-> Write a script which takes the entry from the form and adds it into the table
+                let elem = document.querySelector("form");
+                elem.addEventListener("submit", (e) => {
+                    e.preventDefault();
+
+                    let name = document.querySelector("#name").value;
+                    let marks=document.querySelector("#marks").value;
+                    let sno = document.querySelectorAll("tbody tr").length +1;
+                    let newrow = document.createElement("tr");
+                    newrow.innerHTML=`
+                            <td>${sno}</td>
+                            <td>${name}</td>
+                            <td>${marks}</td>`;
+
+                    let tbody= document.querySelector("tbody");
+                    tbody.appendChild(newrow);
+                })
+            </script>
+    </body>
+</html>

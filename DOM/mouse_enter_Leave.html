@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            body {
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .painting{
+                height: 20rem;
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: 20rem;
+                border: 2px solid black;
+                border-radius: 20px;
+                box-shadow: 0 4px 3px 0, 0 4px 6px 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="painting"></div>
+        <script>
+            let c = document.querySelector(".painting");
+           c.addEventListener("mouseenter", (e) => {
+               c.style.backgroundImage="url('bebop.jpg')";
+            })
+           c.addEventListener("mouseleave", (e) => {
+               c.style.backgroundImage="none";
+            })
+        </script>
+    </body>
+</html>

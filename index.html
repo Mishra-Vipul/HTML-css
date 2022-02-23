@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pepcoding</title>
+    <style>
+        /* <!--simple_selectors-->
+        h1 {
+        color:
+        rgb(20,
+        131,
+        26);
+        }
+        p {
+        background-color:
+        rgb(202,
+        120,
+        184);
+        }
+        #unique {
+        text-decoration:
+        underline;
+        }
+        .common {
+        background-color:
+        yellow;
+        }
+        */
+        /*combinators*/
+        .common p {
+            color: rgb(0, 217, 255);
+        }
+        .common > p {
+            background-color: brown;
+        }
+        .common + div{
+            color: blue;
+        }
+        .common ~ div{
+            background-color: aquamarine;
+        }
+
+        /*Attribute selectors*/
+
+        label[for]{
+            color: rgb(247, 118, 14);
+        }
+        label[for="name"]{
+            background-color: rgb(14, 154, 247);
+        }
+        input[type]{
+            background-color: black;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <form>
+        <label for="name">Name</label>
+        <input type="text" id="Name"><br>
+        <label for="pass">email</label>
+        <input type="email" id="pass"><br>
+        <label for="">Number</label>
+        <input type="number"><br>
+        <label for="">Password</label>
+        <input type="password"><br>
+    </form>
+    <div class="common common2">
+        <div class="something1">Something</div>
+        <div class="something2">
+            <p>
+                hahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahaha
+                hahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahaha
+                hahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahaha
+                hahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahaha
+            </p>
+        </div>
+        <div class="something3"></div>
+        <p>Hello bhay!</p>
+    </div>
+    <div class="sib">I'm sibling</div>
+
+
+
+
+    <h1>Hello Everyone</h1>
+    <h2>Hello Everyone</h2>
+    <h3>Hello Everyone</h3>
+
+    <p>
+        hahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahaha
+        hahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahaha
+        hahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahaha
+        hahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahaha
+    </p>
+    <a href="https://www.google.com/">Go to google.</a>
+    <!--Division-->
+    <div id="unique">
+        Hello
+        <p>YOYO!!!</p>
+    </div>
+    
+    <div></div>
+    <div class="common">Hello2</div>
+    <div></div>
+    <div class="common2">hello3</div>
+
+    <!--unordered List-->
+    <ul>
+        <!--li: List elements-->
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+    </ul>
+    <!--Ordered list-->
+    <ol>
+        <!--li: List elements-->
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+    </ol>
+
+    <span>Content filling</span>
+
+    <img width="100%" src="./supper.jpg" alt="Some Image">
+
+    
+</body>
+
+</html>

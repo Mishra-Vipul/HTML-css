@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            body {
+                height: 100vh;
+                width: 100vw;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .salmon {
+                height: 30rem;
+                width: 30rem;
+                background-color: salmon;
+                
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .green {
+                height: 20rem;
+                width: 20rem;
+                background-color: lightgreen;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .blue {
+                height: 10rem;
+                width: 10rem;
+                background-color: lightblue;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .yellow {
+                height: 5rem;
+                width: 5rem;
+                background-color: yellow;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="salmon">
+            <div class="green">
+                <div class="blue">
+                    <div class="yellow"></div>
+                </div>
+            </div>
+        </div>
+        <script>
+            //Q-> Write a code to remove the innermost color.
+            // //Ans->1. While loop approach
+            let elem=document.querySelector("div");
+            // while(elem.children.length>0){
+            //     elem=elem.children[0];
+            // }
+            // elem.remove();
+
+
+            //Ans->2. Recursive approach
+            // function removeInnermost(elem){
+            //     if(elem.children.length > 0){
+            //         removeInnermost(elem.children[0]);
+            //     }
+            //     else{
+            //         elem.remove();
+            //     }
+            // }
+            // removeInnermost(elem);
+
+            //Ans->3. One liner approach(brute force)
+            // let allElem=document.querySelectorAll("div");
+            // allElem[3].remove();
+        </script>
+    </body>
+</html>

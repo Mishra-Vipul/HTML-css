@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            body{
+                height: 90vh;
+                width: 90vh;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            //Q-> Without using media queries do the following tasks:
+
+            //1- For desktop sizes make the bg of the above div lightpink
+            //2. for laptop sizes make the bg of above div light blue
+            //3. for the mobile sizes make the bg of the above div lightgreen
+
+            let elem= document.querySelector("body");
+            window.addEventListener("resize", (e) => {
+                let width =window.innerWidth;
+                if(width <= 600){
+                    elem.style.backgroundColor = "lightgreen";
+                }
+                else if (width<=1024){
+                    elem.style.backgroundColor = "lightblue";
+                }
+                else{
+                    elem.style.backgroundColor = "lightpink";
+                }
+            })
+        </script>
+    </body>
+</html>
